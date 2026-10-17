@@ -1,0 +1,36 @@
+# Secrets
+.env
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+venv/
+.venv/
+
+# Runtime artifacts (keep directory, ignore contents)
+storage/pdfs/*
+storage/newsletters/*
+storage/cache/*
+storage/clinical_knowledge/*
+!storage/**/.gitkeep
+
+# Local logs / scratch / sqlite
+*.log
+*.db
+*.sqlite
+*.sqlite3
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

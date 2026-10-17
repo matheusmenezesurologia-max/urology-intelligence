@@ -1,0 +1,60 @@
+# ---------------------------------------------------------------------------
+# Urology Intelligence — Production dependencies (Python 3.12)
+# ---------------------------------------------------------------------------
+
+# --- Agent framework / LLM orchestration ---
+# (OpenAI/Anthropic are called via their official SDKs directly; langchain-core
+#  is pulled in transitively by langgraph and pinned here for reproducibility.)
+langgraph==0.2.45
+langchain-core==0.3.21
+openai==1.57.0
+anthropic==1.15.0
+tiktoken==0.8.0
+
+# --- Web / HTTP ---
+httpx==0.27.2
+tenacity==9.0.0
+aiohttp==3.11.7
+
+# --- Database (relational) ---
+SQLAlchemy==2.0.36
+psycopg2-binary==2.9.10
+alembic==1.14.0
+
+# --- Vector store ---
+qdrant-client==1.12.1
+
+# --- Messaging / cache / queue ---
+redis==5.2.0
+
+# --- PDF parsing ---
+PyMuPDF==1.24.14
+
+# --- Scheduler ---
+APScheduler==3.10.4
+
+# --- Settings / validation ---
+pydantic==2.10.2
+pydantic-settings==2.6.1
+python-dotenv==1.0.1
+
+# --- Logging / observability ---
+structlog==24.4.0
+prometheus-client==0.21.0
+
+# --- Newsletter rendering ---
+Jinja2==3.1.4
+markdown==3.7
+weasyprint==63.0
+
+# --- API (health checks / RAG query endpoint / metrics) ---
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+
+# --- Testing ---
+pytest==8.3.4
+pytest-asyncio==0.24.0
+pytest-cov==6.0.0
+pytest-mock==3.14.0
+respx==0.21.1
+freezegun==1.5.1
